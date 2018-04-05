@@ -176,7 +176,7 @@ class Message
      * Set the icon (either URL or emoji) we will post as.
      *
      * @param string $icon
-     * @return this
+     * @return $this
      */
     public function setIcon($icon)
     {
@@ -360,7 +360,7 @@ class Message
     /**
      * Set the attachments for the message.
      *
-     * @param string $attachments
+     * @param array $attachments
      * @return $this
      */
     public function setAttachments(array $attachments)
