@@ -11,70 +11,70 @@ class Attachment {
 	 *
 	 * @var string
 	 */
-	protected string $fallback;
+	protected string $fallback = '';
 
 	/**
 	 * Optional text that should appear within the attachment.
 	 *
 	 * @var string
 	 */
-	protected string $text;
+	protected string $text = '';
 
 	/**
 	 * Optional image that should appear within the attachment.
 	 *
 	 * @var string
 	 */
-	protected string $image_url;
+	protected string $image_url = '';
 
 	/**
 	 * Optional thumbnail that should appear within the attachment.
 	 *
 	 * @var string
 	 */
-	protected string $thumb_url;
+	protected string $thumb_url = '';
 
 	/**
 	 * Optional text that should appear above the formatted data.
 	 *
 	 * @var string
 	 */
-	protected string $pretext;
+	protected string $pretext = '';
 
 	/**
 	 * Optional title for the attachment.
 	 *
 	 * @var string
 	 */
-	protected string $title;
+	protected string $title = '';
 
 	/**
 	 * Optional title link for the attachment.
 	 *
 	 * @var string
 	 */
-	protected string $title_link;
+	protected string $title_link = '';
 
 	/**
 	 * Optional author name for the attachment.
 	 *
 	 * @var string
 	 */
-	protected string $author_name;
+	protected string $author_name = '';
 
 	/**
 	 * Optional author link for the attachment.
 	 *
 	 * @var string
 	 */
-	protected string $author_link;
+	protected string $author_link = '';
 
 	/**
 	 * Optional author icon for the attachment.
 	 *
 	 * @var string
 	 */
-	protected string $author_icon;
+	protected string $author_icon = '';
 
 	/**
 	 * The color to use for the attachment.
@@ -88,14 +88,14 @@ class Attachment {
 	 *
 	 * @var string
 	 */
-	protected string $footer;
+	protected string $footer = '';
 
 	/**
 	 * The icon to use for the attachment footer.
 	 *
 	 * @var string
 	 */
-	protected string $footer_icon;
+	protected string $footer_icon = '';
 
 	/**
 	 * The timestamp to use for the attachment.
@@ -135,6 +135,8 @@ class Attachment {
 	 * @return void
 	 */
 	public function __construct(array $attributes) {
+		$this->timestamp = new DateTime();
+
 		if (isset($attributes['fallback'])) {
 			$this->setFallback($attributes['fallback']);
 		}

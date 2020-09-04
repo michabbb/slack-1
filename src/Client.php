@@ -90,7 +90,14 @@ class Client {
 	 * @param Guzzle|null $guzzle
 	 */
 	public function __construct(string $endpoint, array $attributes = [], Guzzle $guzzle = null) {
-		$this->endpoint = $endpoint;
+		$this->endpoint                = $endpoint;
+		$this->channel                 = '';
+		$this->username                = '';
+		$this->icon                    = '';
+		$this->link_names              = '';
+		$this->markdown_in_attachments = [];
+		$this->unfurl_links            = true;
+		$this->unfurl_media            = true;
 
 		if (isset($attributes['channel'])) {
 			$this->setDefaultChannel($attributes['channel']);

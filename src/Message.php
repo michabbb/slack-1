@@ -89,7 +89,15 @@ class Message {
 	 * @return void
 	 */
 	public function __construct(Client $client) {
-		$this->client = $client;
+		$this->client                  = $client;
+		$this->text                    = '';
+		$this->icon                    = '';
+		$this->markdown_in_attachments = [];
+		$this->username                = '';
+		$this->channel                 = '';
+		$this->allow_markdown          = true;
+		$this->attachments             = [];
+		$this->iconType                = '';
 	}
 
 	/**
